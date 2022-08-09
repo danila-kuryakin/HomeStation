@@ -1,37 +1,30 @@
 package ru.kuryakin.meteo.collector.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
-import java.text.SimpleDateFormat;
-import java.util.GregorianCalendar;
+import java.time.LocalDateTime;
 
 /***
- * Данные о погоде.
+ * Данные с датчиков.
  */
 
 @Entity
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "wather")
 public class Weather {
 
-    /***
-     * Формат вывода даты.
-     */
-    SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM HH:mm:ss");
-
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
     private long id;
 
     @Column
-    private GregorianCalendar date;
+    private LocalDateTime date;
 
     @Column
     private Double temperature;
@@ -43,6 +36,7 @@ public class Weather {
     private Double pressure;
 
     @Column
+    @Enumerated(EnumType.ORDINAL)
     private Location location;
 
 }
