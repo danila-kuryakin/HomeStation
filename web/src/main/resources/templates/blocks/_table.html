@@ -1,0 +1,14 @@
+<div class="tableDate" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h2>Последние измерения</h2>
+    <table border="lastData">
+        <tr><td>Id</td><td>Температура</td><td >Влажность</td><td>Давление</td><td>Место</td><td>Дата</td></tr>
+        <tr th:each="weather : ${weathers}">
+            <td><p th:text="${weather.getId()}"></p></td>
+            <td><p th:text="${weather.getTemperature() != null} ? ${weather.getTemperature()} : ''"></p></td>
+            <td><p th:text="${weather.getHumidity() != null} ? ${weather.getHumidity()} : ''"></p></td>
+            <td><p th:text="${weather.getPressure() != null} ? ${weather.getPressure()} : ''"></p></td>
+            <td><p th:text="${weather.getLocation() != null} ? ${weather.getLocation()} : ''"></p></td>
+            <td><p th:text="${weather.getDate()}"></p></td>
+        </tr>
+    </table>
+</div>

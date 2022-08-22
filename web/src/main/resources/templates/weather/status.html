@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Погода дома</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../static/style/header.css" th:href="@{/style/header.css}" />
+    <link rel="shortcut icon" href="../../static/images/HouseIcon.png" type="image/png">
+</head>
+<body>
+<div>
+    <nav>
+        <div class="topNav" id="linkTopNav">
+            <div class="navLeft">
+                <a th:href="@{/}">Главная страница</a>
+            </div>
+            <div class="navCenter">
+                <a th:href="@{/weather}">Погода</a>
+            </div>
+            <div class="navRight">
+                <a id="menu" href="" class="icon">&#9776;</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="content">
+    <div class="weather" xmlns:th="http://www.thymeleaf.org">
+        <div class="displayWeather" th:each="location : ${locations}">
+            <a th:href="@{/weather/{name}(name=${location.getLocation()})}">
+                <div class="titleDisplay">
+                    <p>Место:</p><p th:text="${location.getLocation().getName()}"></p></div>
+                <div class="temperature" th:if="${location.getTemperature() != null}"><p class="label">Температура: </p>
+                    <p th:text="${#numbers.formatDecimal(location.getTemperature(), 0, 2)}">Temperature</p></div>
+                <div class="humidity" th:if="${location.getHumidity() != null}"><p class="label">Влажность: </p>
+                    <p th:text="${#numbers.formatDecimal(location.getHumidity(), 0, 2)}">Humidity</p></div>
+                <div class="pressure" th:if="${location.getPressure() != null}"><p class="label">Давление: </p>
+                    <p th:text="${#numbers.formatDecimal(location.getPressure(), 0, 2)}">Pressure</p></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="canvas">
+        <div class="diagram"><canvas id="diagramTemperature" height="400" width="1200"></canvas></div>
+        <div class="diagram" th:if = "${humidity != null}"><canvas id="diagramHumidity" height="400" width="1200"></canvas></div>
+        <div class="diagram" th:if = "${pressure != null}"><canvas id="diagramPressure" height="400" width="1200"></canvas></div>
+    </div>
+    <div class="scale">
+        <div class="buttonScale">
+            <input value="+" onclick="plusScale()" type="button">
+            <input value="-" onclick="minusScale()" type="button">
+            <input value="<" onclick="leftScale()" type="button">
+            <input value=">" onclick="rightScale()" type="button">
+        </div>
+        <div class="labelScale">
+            <p>Маштаб: <a id="scaleData"/></p>
+            <p>Смещение: <a id="scaleWindow"/></p>
+        </div>
+    </div>
+
+
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script type="text/javascript" th:src="@{../js/status.js}"></script>
+<script th:inline="javascript">
+    var dateJ = /*[[${date}]]*/;
+    var temperatureJ = /*[[${temperature}]]*/;
+    if (/*[[${humidity}]]*/ != null) var humidityJ = /*[[${humidity}]]*/;
+    if (/*[[${pressure}]]*/ != null) var pressureJ = /*[[${pressure}]]*/;
+</script>
+</body>
+</html>

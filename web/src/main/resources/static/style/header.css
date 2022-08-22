@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding:0;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  font-family: 'Raleway', sans-serif;
+}
+nav{
+  margin: auto;
+  width: 100%;
+  height: 50px;
+}
+.topNav{
+    width: 100%;
+  background-color: #666699;
+  font-size: 40px;
+  margin-top: 0px;
+}
+.topNav div {
+    display: inline-block;
+}
+.topNav a{
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 20px;
+  text-align: center;
+}
+.topNav a:hover{
+  color:#333;
+}
+.navLeft{
+    text-align: right;
+    width: 20%;
+}
+.navCenter{
+    text-align: center;
+    width: 56%;
+}
+.navRight{
+    text-align: right;
+    width: 20%;
+}
+
+.displayWeather p, .displayLocation p{
+    display: inline-block;
+}
+.weather, .tableDate{
+    text-align: center;
+}
+
+.displayWeather, .displayLocation{
+    display: inline-block;
+    border-radius: 10px;
+    width: 220px;
+    padding: 10px;
+    border: 2px outset #666699;
+
+}
+.displayWeather:hover{
+    background-color: #f2f6ee;
+}
+.displayWeather a{
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+}
+.displayWeather a:visited{
+    color: #000;
+}
+.content{
+    width: 100%;
+    padding: 10px;
+}
+.canvas .diagram{
+    display: inline-block;
+}
+.diagram{
+    width: 85%;
+}
+.topNav .icon{
+    display: none;
+}
+.scale{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+.scale .buttonScale input{
+    width: 40px;
+    height : 20px;
+}
+
+.scale .labelScale p{
+    display: inline-block;
+    padding: 10px;
+}
+.loginForm{
+    background: #eee2f8;
+    padding: 10px;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.loginForm form{
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

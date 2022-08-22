@@ -1,0 +1,10 @@
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\configuration\JdbcConfiguration.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\models\Location.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\models\Sensors.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\jobs\CollectorJob.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\repository\WeatherRepository.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\service\WeatherService.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\constant\Constants.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\CollectorApplication.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\models\Weather.java
+D:\Project\java\HomeStation\collector\src\main\java\ru\kuryakin\meteo\collector\configuration\CollectorConfiguration.java

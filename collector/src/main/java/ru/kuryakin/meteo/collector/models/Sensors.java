@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import java.util.List;
 
+/***
+ * Ссылки url на устройства с сенсорами
+ */
 @AllArgsConstructor
 @Getter
 @Setter

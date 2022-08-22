@@ -1,4 +1,4 @@
-package ru.kuryakin.meteo.collector.models;
+package ru.kuryakin.meteo.web.models;
 
 import lombok.*;
 

@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ru.kuryakin.meteo</groupId>
 	<artifactId>web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>web</name>
 	<description>Home station</description>
 	<properties>
@@ -44,9 +44,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
+		<finalName>${project.artifactId}_${version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

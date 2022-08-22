@@ -12,17 +12,6 @@ public class CollectorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CollectorApplication.class, args);
-//		ApplicationContext context = new AnnotationConfigApplicationContext(CollectorApplication.class);
-//
-//		TimerRunner timerRunner = context.getBean(TimerRunner.class);
-//		timerRunner.run();
-//		while (true){
-//			Scanner in = new Scanner(System.in);
-//			String str = in.next();
-//			if (str.equals("stop")){
-//				return;
-//			}
-//		}
 	}
 
 }

@@ -12,6 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import ru.kuryakin.meteo.collector.models.Sensors;
+import ru.kuryakin.meteo.collector.provider.ConstantsProvider;
 import ru.kuryakin.meteo.collector.service.WeatherService;
 import ru.kuryakin.meteo.collector.models.Location;
 
@@ -44,7 +45,7 @@ public class CollectorJob {
     /***
      * Запуск сборщика данных.
      */
-    @Scheduled(cron="0 0/2 * * * *")
+    @Scheduled(cron="0 0/1 * * * *")
     public void collect() {
 
         log.info(START_COLLECTOR);

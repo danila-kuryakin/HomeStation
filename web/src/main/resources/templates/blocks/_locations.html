@@ -1,0 +1,14 @@
+<div class="weather" xmlns:th="http://www.thymeleaf.org">
+    <div class="displayWeather" th:each="location : ${locations}">
+        <a th:href="@{/weather/{name}(name=${location.getLocation()})}">
+            <div class="titleDisplay">
+                <p>Место:</p><p th:text="${location.getLocation().getName()}"></p></div>
+            <div class="temperature" th:if="${location.getTemperature() != null}"><p class="label">Температура: </p>
+                <p th:text="${#numbers.formatDecimal(location.getTemperature(), 0, 2)}">Temperature</p></div>
+            <div class="humidity" th:if="${location.getHumidity() != null}"><p class="label">Влажность: </p>
+                <p th:text="${#numbers.formatDecimal(location.getHumidity(), 0, 2)}">Humidity</p></div>
+            <div class="pressure" th:if="${location.getPressure() != null}"><p class="label">Давление: </p>
+                <p th:text="${#numbers.formatDecimal(location.getPressure(), 0, 2)}">Pressure</p></div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  data:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/homeStation
+    username: web
+    password: web
+    driver-class-name: org.postgresql.Driver

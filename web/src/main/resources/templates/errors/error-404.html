@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Погода дома</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../static/style/header.css" th:href="@{/style/header.css}" />
+    <link rel="shortcut icon" href="../../static/images/HouseIcon.png" type="image/png">
+</head>
+<body xmlns:th="http://www.w3.org/1999/xhtml">
+<div xmlns:th="http://www.thymeleaf.org">
+    <nav>
+        <div class="topNav" id="linkTopNav">
+            <div class="navLeft">
+                <a th:href="@{/}">Главная страница</a>
+            </div>
+            <div class="navCenter">
+                <a th:href="@{/weather}">Погода</a>
+            </div>
+            <div class="navRight">
+                <a id="menu" href="" class="icon">&#9776;</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="content">
+    <h2>Ошибка 404</h2>
+</div>
+</body>
+</html>
